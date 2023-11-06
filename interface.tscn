@@ -1,0 +1,1478 @@
+[gd_scene load_steps=70 format=3 uid="uid://p5x87mmpg36q"]
+
+[ext_resource type="Texture2D" uid="uid://dgh0xkr1rjxbl" path="res://Assets/Background.png" id="1_gg7td"]
+[ext_resource type="Script" path="res://interface.gd" id="1_umkjl"]
+[ext_resource type="Texture2D" uid="uid://bowbgqq7d7mc1" path="res://Assets/Reference_bk.png" id="2_5ykiy"]
+[ext_resource type="Texture2D" uid="uid://b2nh18xxxoil3" path="res://Assets/daily-tasks.png" id="4_8v2jp"]
+[ext_resource type="Texture2D" uid="uid://cuoxv46eatj41" path="res://Assets/next-button-sprite.png" id="4_r2l63"]
+[ext_resource type="Texture2D" uid="uid://pppaxs4ppxmy" path="res://Assets/progress-bar-progress.png" id="4_tmgh8"]
+[ext_resource type="Texture2D" uid="uid://bud2fjqnvomrr" path="res://Assets/progress-bar-over.png" id="5_l2ku1"]
+[ext_resource type="Texture2D" uid="uid://ccbig8ufakx4p" path="res://Assets/status-bar.png" id="7_tivkt"]
+[ext_resource type="Texture2D" uid="uid://ct7c11ceqtg15" path="res://Assets/health-springe.png" id="8_3h1ig"]
+[ext_resource type="Texture2D" uid="uid://bfl1ixiy83c11" path="res://Assets/batetery-sprite.png" id="9_30kmm"]
+[ext_resource type="Texture2D" uid="uid://cgy1ertpbumhv" path="res://Assets/smile.png" id="9_obnfx"]
+[ext_resource type="Texture2D" uid="uid://cwgaij4w3876w" path="res://Assets/camera.png" id="10_cwy72"]
+[ext_resource type="Texture2D" uid="uid://dwjeik4tc6550" path="res://Assets/planet-earth.png" id="10_s66ic"]
+[ext_resource type="Texture2D" uid="uid://bcud0aka18xjm" path="res://Assets/idea-bulb 2.png" id="11_5ex8d"]
+[ext_resource type="Texture2D" uid="uid://byhg4ytl23dpi" path="res://Assets/stress.png" id="13_gmtwn"]
+[ext_resource type="Texture2D" uid="uid://b1ii5m72wkwc0" path="res://Assets/box-inside2-sprite.png" id="13_iu3qf"]
+[ext_resource type="Texture2D" uid="uid://cbmmiecbwgotv" path="res://Assets/a1.png" id="16_1swxm"]
+[ext_resource type="Texture2D" uid="uid://3bvi8wnklvp" path="res://Assets/popup2-sprite.png" id="16_an5po"]
+[ext_resource type="Texture2D" uid="uid://cdpag7aggf6fs" path="res://Assets/close-button-round-sprite.png" id="19_7qud6"]
+[ext_resource type="Texture2D" uid="uid://bf1861u3w05jp" path="res://Assets/istockphoto-483768005-612x612.jpg" id="20_3b2eh"]
+[ext_resource type="Texture2D" uid="uid://cvn6mafssaip4" path="res://Assets/salary.png" id="21_20hcw"]
+[ext_resource type="Texture2D" uid="uid://b02fejl6461r8" path="res://Assets/toddler_activities/Art-cover.png" id="21_nossk"]
+[ext_resource type="Texture2D" uid="uid://mupf83r8ywcl" path="res://Assets/toddler_activities/mental-cover.png" id="22_6hpoc"]
+[ext_resource type="Texture2D" uid="uid://mitpkxu621h8" path="res://Assets/online-learning.png" id="22_qfcf5"]
+[ext_resource type="Texture2D" uid="uid://dqhkco8jgsjnd" path="res://Assets/toddler_activities/motor-cover.png" id="23_ln4l1"]
+[ext_resource type="Texture2D" uid="uid://b8xsw8utoc08c" path="res://Assets/hard-work.png" id="23_w3al0"]
+[ext_resource type="Texture2D" uid="uid://b5u06adp6g1f7" path="res://Assets/toddler_activities/music-cover.png" id="24_eqfcm"]
+[ext_resource type="Texture2D" uid="uid://dtw6s2iaqsecr" path="res://Assets/chatting.png" id="24_oaobj"]
+[ext_resource type="Texture2D" uid="uid://borejdmlnjl7q" path="res://Assets/box-inside-sprite.png" id="25_0dgcd"]
+[ext_resource type="Texture2D" uid="uid://5682tuqgv37j" path="res://Assets/toddler_activities/care-cover.png" id="25_o1wxm"]
+[ext_resource type="Texture2D" uid="uid://dlws3tvpjk7q" path="res://Assets/toddler_activities/Art1.png" id="26_revmf"]
+[ext_resource type="Texture2D" uid="uid://c1qrxeomeynn8" path="res://Assets/toddler_activities/Art2.png" id="27_6hspp"]
+[ext_resource type="Texture2D" uid="uid://cw55it1gytkge" path="res://Assets/toddler_activities/Art3.png" id="28_2mwes"]
+[ext_resource type="Texture2D" uid="uid://bd00u4bwyqv6b" path="res://Assets/character-models/baby-body.png" id="28_nv4uk"]
+[ext_resource type="Texture2D" uid="uid://wvrbwiw8ninq" path="res://Assets/toddler_activities/Art4.png" id="29_pr2u7"]
+[ext_resource type="Texture2D" uid="uid://dllfy83ypno21" path="res://Assets/toddler_activities/mental1.png" id="30_p0ikm"]
+[ext_resource type="Texture2D" uid="uid://nnsyg23fjt5w" path="res://Assets/toddler_activities/mental3.png" id="31_2c52s"]
+[ext_resource type="Texture2D" uid="uid://bkgfai51p8776" path="res://Assets/toddler_activities/mental2.png" id="32_omxex"]
+[ext_resource type="Texture2D" uid="uid://bv6wv4j16e7rn" path="res://Assets/toddler_activities/mental4.png" id="33_0mt2q"]
+[ext_resource type="Texture2D" uid="uid://cg4i2t0b6m1qv" path="res://Assets/toddler_activities/mental6.png" id="34_85fkc"]
+[ext_resource type="Texture2D" uid="uid://cusa7xj4t3v3t" path="res://Assets/toddler_activities/mental5.png" id="35_j7ttp"]
+[ext_resource type="Texture2D" uid="uid://bp7ovev4wj0tl" path="res://Assets/toddler_activities/motor1.png" id="36_23xe3"]
+[ext_resource type="Texture2D" uid="uid://djnnq2ptv73v0" path="res://Assets/toddler_activities/motor2.png" id="37_pob3t"]
+[ext_resource type="Texture2D" uid="uid://b3hu1nwbhawph" path="res://Assets/toddler_activities/motor3.png" id="38_djn01"]
+[ext_resource type="Texture2D" uid="uid://dfscgfqx5gee7" path="res://Assets/toddler_activities/motor4.png" id="39_vfqdd"]
+[ext_resource type="Texture2D" uid="uid://dcncdlneeg1oa" path="res://Assets/toddler_activities/motor5.png" id="40_mqtqs"]
+[ext_resource type="Texture2D" uid="uid://cybyeh1rh65dw" path="res://Assets/toddler_activities/motor6.png" id="41_0ism8"]
+[ext_resource type="Texture2D" uid="uid://djtipxy1400pq" path="res://Assets/toddler_activities/music1.png" id="42_vmbbp"]
+[ext_resource type="Texture2D" uid="uid://g4alm31dg7j4" path="res://Assets/toddler_activities/music2.png" id="43_o6k4e"]
+[ext_resource type="Texture2D" uid="uid://4vqjkn3yoti6" path="res://Assets/toddler_activities/music4.png" id="44_t1mus"]
+[ext_resource type="Texture2D" uid="uid://o03qxdsspjrt" path="res://Assets/toddler_activities/music3.png" id="45_de0wl"]
+[ext_resource type="Texture2D" uid="uid://q8e1isy7yba6" path="res://Assets/toddler_activities/care1.png" id="46_1efsi"]
+[ext_resource type="Texture2D" uid="uid://8gdfy7fcamys" path="res://Assets/toddler_activities/care2.png" id="47_k5iug"]
+[ext_resource type="Texture2D" uid="uid://b068kh3jk0o40" path="res://Assets/toddler_activities/care3.png" id="48_r6x3h"]
+[ext_resource type="Texture2D" uid="uid://bclmtjokl1pwc" path="res://Assets/toddler_activities/care4.png" id="49_yosb5"]
+[ext_resource type="Texture2D" uid="uid://nyhjaukvtnuq" path="res://Assets/toddler_activities/care5.png" id="50_tl8rm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lcumi"]
+texture = ExtResource("13_iu3qf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fd1el"]
+texture = ExtResource("25_0dgcd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4nu4n"]
+texture = ExtResource("8_3h1ig")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0exlx"]
+texture = ExtResource("9_obnfx")
+axis_stretch_vertical = 2
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cb3l7"]
+texture = ExtResource("10_s66ic")
+texture_margin_left = 5.0
+texture_margin_right = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gi7dj"]
+texture = ExtResource("11_5ex8d")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c4n4r"]
+texture = ExtResource("10_cwy72")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u31g7"]
+texture = ExtResource("13_gmtwn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_212mx"]
+texture = ExtResource("16_an5po")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_meqpx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ufdt5"]
+texture = ExtResource("9_obnfx")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wgktm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1cwbm"]
+texture = ExtResource("16_an5po")
+
+[node name="Interface" type="Node"]
+script = ExtResource("1_umkjl")
+metadata/_edit_horizontal_guides_ = []
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(720, 1544)
+scale = Vector2(1.33333, 1.60833)
+texture = ExtResource("1_gg7td")
+
+[node name="ReferenceBk" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.105882)
+position = Vector2(720, 1544)
+scale = Vector2(1.33333, 1.60833)
+texture = ExtResource("2_5ykiy")
+
+[node name="BasicInfoContainer" type="PanelContainer" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 180)
+anchors_preset = -1
+anchor_left = 0.388
+anchor_top = 0.245
+anchor_right = 0.388
+anchor_bottom = 0.245
+offset_left = 0.279968
+offset_top = 0.440002
+offset_right = 527.28
+offset_bottom = 246.44
+
+[node name="BasicInfoVBox" type="VBoxContainer" parent="BasicInfoContainer"]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="BasicInfoContainer/BasicInfoVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+
+[node name="SexIndentityLabel" type="Label" parent="BasicInfoContainer/BasicInfoVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+
+[node name="Age_Label" type="Label" parent="BasicInfoContainer/BasicInfoVBox"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+
+[node name="OcupationLabel" type="Label" parent="BasicInfoContainer/BasicInfoVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Next-button-sprite" type="Sprite2D" parent="UI"]
+modulate = Color(0.945098, 0.92549, 0.878431, 1)
+position = Vector2(1193.5, 2016.5)
+scale = Vector2(1.395, 1.55714)
+texture = ExtResource("4_r2l63")
+
+[node name="NextYearButton" type="Button" parent="UI/Next-button-sprite"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -35.0
+offset_right = -100.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 30
+text = "Next Year"
+flat = true
+
+[node name="Daily-tasks" type="Sprite2D" parent="UI"]
+visible = false
+position = Vector2(1165, 2455)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("4_8v2jp")
+
+[node name="ActivityButton" type="Button" parent="UI/Daily-tasks"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -64.0
+offset_right = -64.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EnergyBar" type="TextureProgressBar" parent="."]
+offset_left = 1151.0
+offset_top = 812.0
+offset_right = 1323.0
+offset_bottom = 875.0
+value = 100.0
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+texture_under = ExtResource("4_tmgh8")
+texture_over = ExtResource("5_l2ku1")
+texture_progress = ExtResource("4_tmgh8")
+tint_over = Color(0, 0, 0, 1)
+tint_progress = Color(0.101961, 1, 0, 1)
+
+[node name="Batetery-sprite" type="Sprite2D" parent="EnergyBar"]
+position = Vector2(89, 32)
+scale = Vector2(1.44615, 1.75)
+texture = ExtResource("9_30kmm")
+
+[node name="Label" type="Label" parent="EnergyBar"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -54.0
+offset_right = 171.0
+offset_bottom = -2.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Energy"
+
+[node name="StatusProfile" type="PanelContainer" parent="."]
+offset_left = 105.0
+offset_top = 754.0
+offset_right = 536.0
+offset_bottom = 1868.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_lcumi")
+
+[node name="StatusProfileVbox" type="VBoxContainer" parent="StatusProfile"]
+layout_mode = 2
+
+[node name="ProfielContainerMarginr" type="MarginContainer" parent="StatusProfile/StatusProfileVbox"]
+custom_minimum_size = Vector2(0, 450)
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="PanelContainer" type="PanelContainer" parent="StatusProfile/StatusProfileVbox/ProfielContainerMarginr"]
+self_modulate = Color(0.843993, 0.949402, 0.963175, 1)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_fd1el")
+
+[node name="body" type="Sprite2D" parent="StatusProfile/StatusProfileVbox/ProfielContainerMarginr/PanelContainer"]
+position = Vector2(0, 17)
+scale = Vector2(0.75, 0.75)
+centered = false
+
+[node name="hair" type="Sprite2D" parent="StatusProfile/StatusProfileVbox/ProfielContainerMarginr/PanelContainer"]
+position = Vector2(0, 17)
+scale = Vector2(0.75, 0.75)
+centered = false
+
+[node name="clothes" type="Sprite2D" parent="StatusProfile/StatusProfileVbox/ProfielContainerMarginr/PanelContainer"]
+position = Vector2(0, 17)
+scale = Vector2(0.75, 0.75)
+centered = false
+
+[node name="emotion" type="Sprite2D" parent="StatusProfile/StatusProfileVbox/ProfielContainerMarginr/PanelContainer"]
+position = Vector2(0, 17)
+scale = Vector2(0.75, 0.75)
+centered = false
+
+[node name="StatusContainerMargin" type="MarginContainer" parent="StatusProfile/StatusProfileVbox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 20
+
+[node name="StatusContainer" type="HBoxContainer" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="StatusContainerSprites" type="VBoxContainer" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HealthSpriteContainer" type="MarginContainer" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerSprites"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="PanelContainer" type="PanelContainer" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerSprites/HealthSpriteContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_4nu4n")
+
+[node name="HappinessSpriteContainer" type="MarginContainer" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerSprites"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="PanelContainer2" type="PanelContainer" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerSprites/HappinessSpriteContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_0exlx")
+
+[node name="CharismaSpriteContainer" type="MarginContainer" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerSprites"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 15
+
+[node name="PanelContainer3" type="PanelContainer" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerSprites/CharismaSpriteContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_cb3l7")
+
+[node name="InteligenceSpriteContainer" type="MarginContainer" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerSprites"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 15
+
+[node name="PanelContainer4" type="PanelContainer" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerSprites/InteligenceSpriteContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_gi7dj")
+
+[node name="ApperenceSpriteContainer" type="MarginContainer" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerSprites"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 15
+
+[node name="PanelContainer5" type="PanelContainer" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerSprites/ApperenceSpriteContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_c4n4r")
+
+[node name="StressSpriteContainer" type="MarginContainer" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerSprites"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 45
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 15
+
+[node name="PanelContainer6" type="PanelContainer" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerSprites/StressSpriteContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_u31g7")
+
+[node name="StatusContainerBars" type="VBoxContainer" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 5
+
+[node name="HealthContainerBar" type="VBoxContainer" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = -5
+
+[node name="HealthLabel" type="Label" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars/HealthContainerBar"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Health"
+
+[node name="HealthBar" type="TextureProgressBar" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars/HealthContainerBar"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+value = 100.0
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+texture_under = ExtResource("4_tmgh8")
+texture_over = ExtResource("5_l2ku1")
+texture_progress = ExtResource("4_tmgh8")
+tint_over = Color(0, 0, 0, 1)
+tint_progress = Color(0.658824, 0.0392157, 0.0470588, 1)
+metadata/_edit_group_ = true
+
+[node name="HealthBarSprite" type="Sprite2D" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars/HealthContainerBar/HealthBar"]
+modulate = Color(0.937255, 0.643137, 0.65098, 1)
+position = Vector2(150, 23)
+scale = Vector2(1.51, 1.56)
+texture = ExtResource("7_tivkt")
+
+[node name="HappinesContainerBar" type="VBoxContainer" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = -5
+
+[node name="HappinesLabel" type="Label" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars/HappinesContainerBar"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Happiness"
+
+[node name="HappinessBar" type="TextureProgressBar" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars/HappinesContainerBar"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+value = 100.0
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+texture_under = ExtResource("4_tmgh8")
+texture_over = ExtResource("5_l2ku1")
+texture_progress = ExtResource("4_tmgh8")
+tint_over = Color(0, 0, 0, 1)
+tint_progress = Color(0.647059, 0.384314, 0.027451, 1)
+metadata/_edit_group_ = true
+
+[node name="HappinessBarSprite" type="Sprite2D" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars/HappinesContainerBar/HappinessBar"]
+modulate = Color(0.964706, 0.815686, 0.662745, 1)
+position = Vector2(150, 23)
+scale = Vector2(1.51, 1.56)
+texture = ExtResource("7_tivkt")
+
+[node name="CharismaContainerBar" type="VBoxContainer" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = -5
+
+[node name="CharismaLabel" type="Label" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars/CharismaContainerBar"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Charisma"
+
+[node name="CharismaBar" type="TextureProgressBar" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars/CharismaContainerBar"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+texture_under = ExtResource("4_tmgh8")
+texture_over = ExtResource("5_l2ku1")
+texture_progress = ExtResource("4_tmgh8")
+tint_over = Color(0, 0, 0, 1)
+tint_progress = Color(0.0313726, 0.65098, 0.25098, 1)
+metadata/_edit_group_ = true
+
+[node name="CharismaBarSprite" type="Sprite2D" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars/CharismaContainerBar/CharismaBar"]
+modulate = Color(0.760784, 0.976471, 0.67451, 1)
+position = Vector2(150, 23)
+scale = Vector2(1.51, 1.56)
+texture = ExtResource("7_tivkt")
+
+[node name="IntelligenceContainerBar" type="VBoxContainer" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = -5
+
+[node name="IntelligenceLabel" type="Label" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars/IntelligenceContainerBar"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Intelligence"
+
+[node name="IntelligenceBar" type="TextureProgressBar" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars/IntelligenceContainerBar"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+texture_under = ExtResource("4_tmgh8")
+texture_over = ExtResource("5_l2ku1")
+texture_progress = ExtResource("4_tmgh8")
+tint_over = Color(0, 0, 0, 1)
+tint_progress = Color(0.0392157, 0.396078, 0.654902, 1)
+metadata/_edit_group_ = true
+
+[node name="IntelligenceBarSprite" type="Sprite2D" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars/IntelligenceContainerBar/IntelligenceBar"]
+modulate = Color(0.65098, 0.854902, 0.94902, 1)
+position = Vector2(150, 23)
+scale = Vector2(1.51, 1.56)
+texture = ExtResource("7_tivkt")
+
+[node name="AppearanceContainer" type="VBoxContainer" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = -5
+
+[node name="AppearanceLabel" type="Label" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars/AppearanceContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Appearance"
+
+[node name="AppearanceBar" type="TextureProgressBar" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars/AppearanceContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+texture_under = ExtResource("4_tmgh8")
+texture_over = ExtResource("5_l2ku1")
+texture_progress = ExtResource("4_tmgh8")
+tint_over = Color(0, 0, 0, 1)
+tint_progress = Color(0.431373, 0.027451, 0.647059, 1)
+metadata/_edit_group_ = true
+
+[node name="AppearanceBarSprinte" type="Sprite2D" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars/AppearanceContainer/AppearanceBar"]
+modulate = Color(0.811765, 0.666667, 0.968627, 1)
+position = Vector2(150, 23)
+scale = Vector2(1.51, 1.56)
+texture = ExtResource("7_tivkt")
+
+[node name="StressContainer" type="VBoxContainer" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = -5
+
+[node name="Label" type="Label" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars/StressContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Stress"
+
+[node name="StressBar" type="TextureProgressBar" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars/StressContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+texture_under = ExtResource("4_tmgh8")
+texture_over = ExtResource("5_l2ku1")
+texture_progress = ExtResource("4_tmgh8")
+tint_over = Color(0, 0, 0, 1)
+tint_progress = Color(0.929412, 0.254902, 0.921569, 1)
+metadata/_edit_group_ = true
+
+[node name="StressBarSprinte" type="Sprite2D" parent="StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars/StressContainer/StressBar"]
+modulate = Color(0.968627, 0.666667, 0.964706, 1)
+position = Vector2(150, 23)
+scale = Vector2(1.51, 1.56)
+texture = ExtResource("7_tivkt")
+
+[node name="Control" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1440.0
+offset_bottom = 3088.0
+
+[node name="A1" type="Sprite2D" parent="Control"]
+self_modulate = Color(0.482353, 1, 1, 0.584314)
+position = Vector2(720, 1424)
+scale = Vector2(2.88, 3.73143)
+texture = ExtResource("16_1swxm")
+
+[node name="randomEventPanelContainer" type="PanelContainer" parent="Control"]
+self_modulate = Color(0.984314, 0.956863, 0.945098, 1)
+layout_mode = 0
+offset_left = 70.0
+offset_top = 1000.0
+offset_right = 1370.0
+offset_bottom = 1850.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_212mx")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/randomEventPanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 165
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 150
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/randomEventPanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/randomEventPanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_meqpx")
+
+[node name="VSplitContainer" type="VSplitContainer" parent="Control/randomEventPanelContainer/MarginContainer/HBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/randomEventPanelContainer/MarginContainer/HBoxContainer/PanelContainer/VSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_ufdt5")
+
+[node name="PanelContainer2" type="PanelContainer" parent="Control/randomEventPanelContainer/MarginContainer/HBoxContainer/PanelContainer/VSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_wgktm")
+
+[node name="LuckEventLabel" type="RichTextLabel" parent="Control/randomEventPanelContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(850, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+bbcode_enabled = true
+text = "Random Event Here"
+language = "en"
+
+[node name="Close-button-round-sprite" type="Sprite2D" parent="Control/randomEventPanelContainer"]
+position = Vector2(1240, 50)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("19_7qud6")
+
+[node name="CloseRandomEventButton" type="Button" parent="Control/randomEventPanelContainer/Close-button-round-sprite"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -50.0
+offset_right = -50.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Choose2ButtonSprite2" type="Sprite2D" parent="Control/randomEventPanelContainer"]
+self_modulate = Color(1, 1, 1, 0.705882)
+position = Vector2(780, 765)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("4_r2l63")
+
+[node name="Choose2Button" type="Button" parent="Control/randomEventPanelContainer/Choose2ButtonSprite2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.0
+offset_top = -65.0
+offset_right = -9.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Okay"
+flat = true
+
+[node name="Choose1ButtonSprite" type="Sprite2D" parent="Control/randomEventPanelContainer"]
+position = Vector2(1115, 765)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("4_r2l63")
+metadata/_edit_group_ = true
+
+[node name="Choose1Button" type="Button" parent="Control/randomEventPanelContainer/Choose1ButtonSprite"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.104
+offset_left = -100.0
+offset_top = -35.0
+offset_right = -100.0
+offset_bottom = -42.28
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Okay"
+flat = true
+
+[node name="ActicitiesMenu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 46.0
+offset_top = 611.0
+offset_right = 1408.0
+offset_bottom = 2150.0
+
+[node name="ActicitiesMenuBox" type="PanelContainer" parent="ActicitiesMenu"]
+custom_minimum_size = Vector2(0, 1550)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_1cwbm")
+
+[node name="Close-button-round-sprite" type="Sprite2D" parent="ActicitiesMenu/ActicitiesMenuBox"]
+position = Vector2(1262, 91)
+texture = ExtResource("19_7qud6")
+
+[node name="ActicitiesMenuBoxCloseButton" type="Button" parent="ActicitiesMenu/ActicitiesMenuBox/Close-button-round-sprite"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -50.0
+offset_right = -50.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Box-inside2-sprite" type="Sprite2D" parent="ActicitiesMenu"]
+self_modulate = Color(0.941176, 0.929412, 0.92549, 1)
+position = Vector2(195, 845)
+scale = Vector2(1, 1.85)
+texture = ExtResource("13_iu3qf")
+
+[node name="ToddlesActivitiesMenus" type="ScrollContainer" parent="ActicitiesMenu/Box-inside2-sprite"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -161.5
+offset_top = -347.0
+offset_right = -161.5
+offset_bottom = -347.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ToddlesActivitiesVBox" type="VBoxContainer" parent="ActicitiesMenu/Box-inside2-sprite/ToddlesActivitiesMenus"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Artistic" type="TextureButton" parent="ActicitiesMenu/Box-inside2-sprite/ToddlesActivitiesMenus/ToddlesActivitiesVBox"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+texture_normal = ExtResource("21_nossk")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ArtisticLabel" type="Label" parent="ActicitiesMenu/Box-inside2-sprite/ToddlesActivitiesMenus/ToddlesActivitiesVBox"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Artistic"
+horizontal_alignment = 1
+
+[node name="Mental" type="TextureButton" parent="ActicitiesMenu/Box-inside2-sprite/ToddlesActivitiesMenus/ToddlesActivitiesVBox"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+texture_normal = ExtResource("22_6hpoc")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MentalLabel" type="Label" parent="ActicitiesMenu/Box-inside2-sprite/ToddlesActivitiesMenus/ToddlesActivitiesVBox"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Mental  Activities"
+horizontal_alignment = 1
+
+[node name="Motor" type="TextureButton" parent="ActicitiesMenu/Box-inside2-sprite/ToddlesActivitiesMenus/ToddlesActivitiesVBox"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+texture_normal = ExtResource("23_ln4l1")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MotorLabel" type="Label" parent="ActicitiesMenu/Box-inside2-sprite/ToddlesActivitiesMenus/ToddlesActivitiesVBox"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Motor Activities"
+horizontal_alignment = 1
+
+[node name="Music" type="TextureButton" parent="ActicitiesMenu/Box-inside2-sprite/ToddlesActivitiesMenus/ToddlesActivitiesVBox"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+texture_normal = ExtResource("24_eqfcm")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MusicLabel" type="Label" parent="ActicitiesMenu/Box-inside2-sprite/ToddlesActivitiesMenus/ToddlesActivitiesVBox"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Music"
+horizontal_alignment = 1
+
+[node name="ChildCare" type="TextureButton" parent="ActicitiesMenu/Box-inside2-sprite/ToddlesActivitiesMenus/ToddlesActivitiesVBox"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+texture_normal = ExtResource("25_o1wxm")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ChildCareLabel" type="Label" parent="ActicitiesMenu/Box-inside2-sprite/ToddlesActivitiesMenus/ToddlesActivitiesVBox"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Child Care"
+horizontal_alignment = 1
+
+[node name="Box-inside-sprite" type="Sprite2D" parent="ActicitiesMenu"]
+position = Vector2(848, 845)
+scale = Vector2(0.927363, 1.38495)
+texture = ExtResource("25_0dgcd")
+
+[node name="ToddlesActivitiesOptions" type="MarginContainer" parent="ActicitiesMenu/Box-inside-sprite"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -502.5
+offset_top = -465.0
+offset_right = -502.5
+offset_bottom = -465.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 25
+
+[node name="ScrollArtistic" type="ScrollContainer" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollArtistic"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 50
+columns = 4
+
+[node name="TextureButton4" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollArtistic/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("26_revmf")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollArtistic/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Go on vacation 1
+£50.000
+-Stress
++Happiness
+"
+
+[node name="TextureButton2" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollArtistic/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("27_6hspp")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label2" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollArtistic/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Go on vacation 2
+£50.000
+-Stress
++Happiness"
+
+[node name="TextureButton3" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollArtistic/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("28_2mwes")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label3" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollArtistic/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Go on vacation 3
+£50.000
+-Stress
++Happiness"
+
+[node name="TextureButton" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollArtistic/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("29_pr2u7")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label4" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollArtistic/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Go on vacation 4
+£50.000
+-Stress
++Happiness"
+
+[node name="ScrollMental" type="ScrollContainer" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMental"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 50
+columns = 4
+
+[node name="TextureButton4" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMental/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("30_p0ikm")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMental/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Go on vacation 1
+£50.000
+-Stress
++Happiness
+"
+
+[node name="TextureButton2" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMental/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("31_2c52s")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label2" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMental/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Go on vacation 2
+£50.000
+-Stress
++Happiness"
+
+[node name="TextureButton3" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMental/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("32_omxex")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label3" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMental/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Go on vacation 3
+£50.000
+-Stress
++Happiness"
+
+[node name="TextureButton" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMental/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("33_0mt2q")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label4" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMental/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Go on vacation 4
+£50.000
+-Stress
++Happiness"
+
+[node name="TextureButton5" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMental/GridContainer"]
+custom_minimum_size = Vector2(15, 150)
+layout_mode = 2
+texture_normal = ExtResource("34_85fkc")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label5" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMental/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+
+[node name="TextureButton6" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMental/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("35_j7ttp")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label6" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMental/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+
+[node name="ScrollMotor" type="ScrollContainer" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMotor"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 50
+columns = 4
+
+[node name="TextureButton4" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMotor/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("36_23xe3")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMotor/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Go on vacation 1
+£50.000
+-Stress
++Happiness
+"
+
+[node name="TextureButton2" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMotor/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("37_pob3t")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label2" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMotor/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Go on vacation 2
+£50.000
+-Stress
++Happiness"
+
+[node name="TextureButton3" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMotor/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("38_djn01")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label3" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMotor/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Go on vacation 3
+£50.000
+-Stress
++Happiness"
+
+[node name="TextureButton" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMotor/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("39_vfqdd")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label4" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMotor/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Go on vacation 4
+£50.000
+-Stress
++Happiness"
+
+[node name="TextureButton5" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMotor/GridContainer"]
+custom_minimum_size = Vector2(15, 150)
+layout_mode = 2
+texture_normal = ExtResource("40_mqtqs")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label5" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMotor/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+
+[node name="TextureButton6" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMotor/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("41_0ism8")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label6" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMotor/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+
+[node name="ScrollMusic" type="ScrollContainer" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMusic"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 50
+columns = 4
+
+[node name="TextureButton4" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMusic/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("42_vmbbp")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMusic/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Go on vacation 1
+£50.000
+-Stress
++Happiness
+"
+
+[node name="TextureButton2" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMusic/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("43_o6k4e")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label2" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMusic/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Go on vacation 2
+£50.000
+-Stress
++Happiness"
+
+[node name="TextureButton3" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMusic/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("44_t1mus")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label3" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMusic/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Go on vacation 3
+£50.000
+-Stress
++Happiness"
+
+[node name="TextureButton" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMusic/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("45_de0wl")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label4" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMusic/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Go on vacation 4
+£50.000
+-Stress
++Happiness"
+
+[node name="ScrollChildCare" type="ScrollContainer" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollChildCare"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 50
+columns = 4
+
+[node name="TextureButton4" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollChildCare/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("46_1efsi")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollChildCare/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Go on vacation 1
+£50.000
+-Stress
++Happiness
+"
+
+[node name="TextureButton2" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollChildCare/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("47_k5iug")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label2" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollChildCare/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Go on vacation 2
+£50.000
+-Stress
++Happiness"
+
+[node name="TextureButton3" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollChildCare/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("48_r6x3h")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label3" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollChildCare/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Go on vacation 3
+£50.000
+-Stress
++Happiness"
+
+[node name="TextureButton" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollChildCare/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("49_yosb5")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label4" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollChildCare/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Go on vacation 4
+£50.000
+-Stress
++Happiness"
+
+[node name="TextureButton5" type="TextureButton" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollChildCare/GridContainer"]
+custom_minimum_size = Vector2(15, 150)
+layout_mode = 2
+texture_normal = ExtResource("50_tl8rm")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label5" type="Label" parent="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollChildCare/GridContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+
+[node name="UIMainMenus" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 2299.0
+offset_right = 1438.0
+offset_bottom = 2728.0
+
+[node name="UIMainMenusMargin" type="MarginContainer" parent="UIMainMenus"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 160
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 140
+
+[node name="UIMainMenusVBox" type="VBoxContainer" parent="UIMainMenus/UIMainMenusMargin"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="UIMainMenusHBoxButtons" type="HBoxContainer" parent="UIMainMenus/UIMainMenusMargin/UIMainMenusVBox"]
+custom_minimum_size = Vector2(0, 230)
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="TextureButton5" type="TextureButton" parent="UIMainMenus/UIMainMenusMargin/UIMainMenusVBox/UIMainMenusHBoxButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("21_20hcw")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton4" type="TextureButton" parent="UIMainMenus/UIMainMenusMargin/UIMainMenusVBox/UIMainMenusHBoxButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("22_qfcf5")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton3" type="TextureButton" parent="UIMainMenus/UIMainMenusMargin/UIMainMenusVBox/UIMainMenusHBoxButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("23_w3al0")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton2" type="TextureButton" parent="UIMainMenus/UIMainMenusMargin/UIMainMenusVBox/UIMainMenusHBoxButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("24_oaobj")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ActivitiesButton" type="TextureButton" parent="UIMainMenus/UIMainMenusMargin/UIMainMenusVBox/UIMainMenusHBoxButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("4_8v2jp")
+stretch_mode = 5
+
+[node name="UIActivitiesHBoxLabels" type="HBoxContainer" parent="UIMainMenus/UIMainMenusMargin/UIMainMenusVBox"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Label5" type="Label" parent="UIMainMenus/UIMainMenusMargin/UIMainMenusVBox/UIActivitiesHBoxLabels"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Financies"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="UIMainMenus/UIMainMenusMargin/UIMainMenusVBox/UIActivitiesHBoxLabels"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Education"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="UIMainMenus/UIMainMenusMargin/UIMainMenusVBox/UIActivitiesHBoxLabels"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Work"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="UIMainMenus/UIMainMenusMargin/UIMainMenusVBox/UIActivitiesHBoxLabels"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Relationships"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="UIMainMenus/UIMainMenusMargin/UIMainMenusVBox/UIActivitiesHBoxLabels"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Activities"
+horizontal_alignment = 1
+
+[node name="Istockphoto-483768005-612x612" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.0784314)
+position = Vector2(720.5, 1424)
+scale = Vector2(2.35457, 6.53)
+texture = ExtResource("20_3b2eh")
+
+[node name="ReferenceBk2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(723, 1547)
+scale = Vector2(1.33889, 1.61146)
+texture = ExtResource("2_5ykiy")
+
+[node name="Baby-body" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(320, 987)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("28_nv4uk")
+
+[connection signal="pressed" from="UI/Next-button-sprite/NextYearButton" to="." method="_on_next_year_button_pressed"]
+[connection signal="pressed" from="UI/Daily-tasks/ActivityButton" to="." method="_on_activity_button_pressed"]
+[connection signal="pressed" from="Control/randomEventPanelContainer/Close-button-round-sprite/CloseRandomEventButton" to="." method="_on_close_random_event_button_pressed"]
+[connection signal="pressed" from="Control/randomEventPanelContainer/Choose2ButtonSprite2/Choose2Button" to="." method="_on_choose_2_button_pressed"]
+[connection signal="pressed" from="Control/randomEventPanelContainer/Choose1ButtonSprite/Choose1Button" to="." method="_on_choose_1_button_pressed"]
+[connection signal="visibility_changed" from="ActicitiesMenu" to="." method="_on_acticities_menu_visibility_changed"]
+[connection signal="pressed" from="ActicitiesMenu/ActicitiesMenuBox/Close-button-round-sprite/ActicitiesMenuBoxCloseButton" to="." method="_on_acticities_menu_box_close_button_pressed"]
+[connection signal="pressed" from="ActicitiesMenu/Box-inside2-sprite/ToddlesActivitiesMenus/ToddlesActivitiesVBox/Artistic" to="." method="_on_activity_1_pressed"]
+[connection signal="pressed" from="ActicitiesMenu/Box-inside2-sprite/ToddlesActivitiesMenus/ToddlesActivitiesVBox/Mental" to="." method="_on_activity_2_pressed"]
+[connection signal="pressed" from="ActicitiesMenu/Box-inside2-sprite/ToddlesActivitiesMenus/ToddlesActivitiesVBox/Motor" to="." method="_on_activity_3_pressed"]
+[connection signal="pressed" from="ActicitiesMenu/Box-inside2-sprite/ToddlesActivitiesMenus/ToddlesActivitiesVBox/Music" to="." method="_on_activity_4_pressed"]
+[connection signal="pressed" from="ActicitiesMenu/Box-inside2-sprite/ToddlesActivitiesMenus/ToddlesActivitiesVBox/ChildCare" to="." method="_on_activity_5_pressed"]
+[connection signal="pressed" from="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollArtistic/GridContainer/TextureButton4" to="." method="_on_texture_button_4_pressed"]
+[connection signal="pressed" from="ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollArtistic/GridContainer/TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="UIMainMenus/UIMainMenusMargin/UIMainMenusVBox/UIMainMenusHBoxButtons/ActivitiesButton" to="." method="_on_activities_button_pressed"]
