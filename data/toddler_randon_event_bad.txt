@@ -1,0 +1,9 @@
+Title	Event	Bonus	Points
+Lost favorite toy:	"You lost your favorite toy, causing distress and sadness."	Happiness - 5	Happiness
+Unsettling dream:	"You had a particularly scary dream, causing nighttime fear and disrupted sleep."	Happiness - 5	Happiness
+Unsuccessful potty training:	"You are struggling to learn to use the potty, facing challenges, and not achieving the desired milestone easily."	Intelligence - 5	Intelligence
+Neglected environment:	"You are lacking a caring and nurturing caregivers, resulting in an unsupportive and unstimulating environment."	Intelligence - 5	Intelligence
+Poor health:	"You are suffering from frequent illnesses and medical issues, and experiencing ongoing health problems."	Health - 5	Health
+Illness:	"Your health is consistently poor, frequently encountering various illnesses and medical concerns."	Health - 5	Health
+Unsupportive community:	"You are isolated and lacking a supportive community, with neighbors and friends offering little to no help or encouragement."	Charisma - 5	Charisma
+Lonely at the Playground:	"You feel excluded and have difficulty making friends in the park, with limited interactions and a sense of isolation."	Charisma - 5	Charisma

@@ -31,70 +31,10 @@ var activities_menu_Activity4:ScrollContainer
 var activities_menu_Activity5:ScrollContainer
 var choose_event_button_2:Sprite2D
 var choose_event_button_1:Sprite2D
+var random_event_texture:Sprite2D
 var choose_event_button_1_label:Button
 var choose_event_button_2_label:Button
 var coin_throw
-
-var random_event_good_luck_toodler = [
-	"\n\nThe toddler receives their favorite toy as a gift, bringing them joy and comfort.", 
-	"\n\nThe toddler has a particularly sweet dream, having a pleasant long sleep.",
-	"\n\nThe toddler successfully learns to use the potty, achieving a significant milestone with ease.",
-	"\n\nThe toddler is surrounded by caring and nurturing caregivers who provide a supportive and stimulating environment.",
-	"\n\nThe toddler remains in excellent health, experiencing minimal illnesses or medical issues.",
-	"\n\nThe toddler enjoys exceptional health, rarely encountering any illnesses or medical concerns.",
-	"\n\nThe toddler becomes part of a supportive community, where neighbors and friends offer help and encouragement.",
-	"\n\nEveryone wanted to play with you in the park and you make lots of friends."
-]
-var random_event_good_luck_title_toodler = [
-	"Favorite toy:", 
-	"Sweet dream:",
-	"Successful potty training:",
-	"Loving caregivers:",
-	"Excellent health:",
-	"Excellent health:",
-	"Supportive community:",
-	"King of the Playground:"
-]
-var random_event_good_luck_bonnus_toodler = [
-	"\nHappiness + 5",
-	"\nHappiness + 5",
-	"\nIntelligence + 5",
-	"\nIntelligence + 5",
-	"\nHealth + 5",
-	"\nHealth + 5",
-	"\nCharisma + 5",
-	"\nCharisma + 5"
-]
-var random_event_bad_luck_title_toodler = [
-	"Lost favorite toy", 
-	"Unsettling dream:",
-	"Unsuccessful potty training:",
-	"Neglected environment:",
-	"Poor health:",
-	"Illness:",
-	"Unsupportive community:",
-	"Lonely at the Playground:"
-]
-var random_event_bad_luck_toodler = [
-	"\n\nThe toddler misplaces or loses their favorite toy, causing distress and sadness.", 
-	"\n\nThe toddler has a particularly unsettling or scary dream, causing nighttime fear and disrupted sleep.",
-	"\n\nThe toddler struggles to learn to use the potty, facing challenges and not achieving the desired milestone easily.",
-	"\n\nThe toddler lacks caring and nurturing caregivers, resulting in an unsupportive and unstimulating environment.",
-	"\n\nThe toddler suffers from frequent illnesses and medical issues, experiencing ongoing health problems.",
-	"\n\nThe toddler's health is consistently poor, frequently encountering various illnesses and medical concerns.",
-	"\n\nThe toddler is isolated and lacks a supportive community, with neighbors and friends offering little to no help or encouragement.",
-	"\n\nYou feel excluded and have difficulty making friends in the park, with limited interactions and a sense of isolation."
-]
-var random_event_bad_luck_bonnus_toodler = [
-	"\nHappiness - 5",
-	"\nHappiness - 5",
-	"\nIntelligence - 5",
-	"\nIntelligence - 5",
-	"\nHealth - 5",
-	"\nHealth - 5",
-	"\nCharisma - 5",
-	"\nCharisma - 5"
-]
 
 var choose_event_title_toodler = [
 	"Early development:", 
@@ -223,6 +163,7 @@ func _ready():
 	choose_event_button_1.visible = true
 	choose_event_button_1_label = $Control/randomEventPanelContainer/Choose1ButtonSprite/Choose1Button
 	choose_event_button_2_label = $Control/randomEventPanelContainer/Choose2ButtonSprite2/Choose2Button
+	random_event_texture = $Control/randomEventPanelContainer/MarginContainer/HBoxContainer/PanelContainer/VSplitContainer/randomEventSprite
 	
 	activities_menu_panelContainer = $ActicitiesMenu
 	activities_menu_panelContainer.visible = false
@@ -335,7 +276,6 @@ func _on_choose_2_button_pressed():
 	print(health)
 	print(appearance)
 	random_event_panelContainer.visible = false
-	
 
 func _on_choose_1_button_pressed():
 	print(health)
@@ -417,38 +357,7 @@ func game_over():
 
 func luck_coin():
 	coin_throw = randf()  # Generate a random number between 0 and 1
-	
-func random_event(): 
-	luck_coin()
-	print(coin_throw)
-	#var event_type = randi() % 2
-	var random_event_number = randi() % 8
-	random_event_panelContainer.visible = true
-	choose_event_button_2.visible = false
-	choose_event_button_1.visible = false
-	if AgeNumber < 5:
-		if coin_throw <= 0.5:
-			$Control/randomEventPanelContainer/MarginContainer/HBoxContainer/LuckEventLabel.bbcode_text = "[b]" + random_event_good_luck_title_toodler[random_event_number] + "[/b]" + random_event_good_luck_toodler[random_event_number] + "[color=blue]" + random_event_good_luck_bonnus_toodler[random_event_number] + "[/color]"
-			random_event_dialog_good_bonnus(random_event_number)
-		elif coin_throw > 0.5:
-			$Control/randomEventPanelContainer/MarginContainer/HBoxContainer/LuckEventLabel.bbcode_text = "[b]" + random_event_bad_luck_title_toodler[random_event_number] + "[/b]" + random_event_bad_luck_toodler[random_event_number] + "[color=red]" + random_event_bad_luck_bonnus_toodler[random_event_number] + "[/color]"
-			random_event_dialog_bad_bonnus(random_event_number)
-	elif AgeNumber < 13:
-		if coin_throw <= 0.33:
-			pass #random_event_label = "good luck"
-		elif coin_throw > 0.33 and coin_throw <= 0.66:
-			pass #random_event_label = "bad luck"
-	elif AgeNumber < 18:
-		if coin_throw <= 0.33:
-			pass #random_event_label = "good luck"
-		elif coin_throw > 0.33 and coin_throw <= 0.66:
-			pass #random_event_label = "bad luck"
-	elif AgeNumber >= 18:
-		if coin_throw <= 0.33:
-			pass #random_event_label = "good luck"
-		elif coin_throw > 0.33 and coin_throw <= 0.66:
-			pass #random_event_label = "bad luck"
-	
+
 func choose_event():	
 	luck_coin()
 	print(coin_throw)
@@ -462,28 +371,6 @@ func choose_event():
 			$Control/randomEventPanelContainer/MarginContainer/HBoxContainer/LuckEventLabel.bbcode_text = "[b]" + choose_event_title_toodler[random_event_number] + "[/b]" + choose_event_toodler[random_event_number] + "[color=blue]"
 			choose_event_button_1_label.text = choose_event_option_1_label_toodler[random_event_number]
 			choose_event_button_2_label.text = choose_event_option_2_label_toodler[random_event_number]
-
-func random_event_dialog_good_bonnus(random_event_number):
-	if random_event_number <= 1:
-		happiness += 5
-	if random_event_number >1 and random_event_number <= 3:
-		intelligence += 5
-	if random_event_number >3 and random_event_number <= 5:
-		health += 5
-	if random_event_number >5 and random_event_number <= 7:
-		charisma += 5
-	update_status()
-
-func random_event_dialog_bad_bonnus(random_event_number):
-	if random_event_number < 1:
-		happiness -= 5
-	if random_event_number >1 and random_event_number <= 3:
-		intelligence -= 5
-	if random_event_number >3 and random_event_number <= 5:
-		health -= 5
-	if random_event_number >5 and random_event_number <= 7:
-		charisma -= 5
-	update_status()
 
 func _on_acticities_menu_hide():
 	activities_menu_Activity1.visible = false
@@ -549,8 +436,68 @@ func _on_texture_button_2_pressed():
 
 const profile_models = preload("res://Assets/character-models/profile-models.gd")
 
-
-
-
-
-
+#random event new system
+func random_event():
+	# Initialize pannels
+	luck_coin()
+	random_event_panelContainer.visible = true
+	choose_event_button_2.visible = false
+	choose_event_button_1.visible = false
+	#select event file
+	var file
+	if coin_throw <= 0.5:
+		if AgeNumber < 5:
+			file = FileAccess.open("res://data/toddler_randon_event_good.txt",FileAccess.READ)
+		elif AgeNumber < 13:
+			pass
+		elif AgeNumber < 18:
+			pass
+		elif AgeNumber >= 18:
+			pass
+	elif coin_throw > 0.5:
+		if AgeNumber < 5:
+			file = FileAccess.open("res://data/toddler_randon_event_bad.txt",FileAccess.READ)
+		elif AgeNumber < 13:
+			pass
+		elif AgeNumber < 18:
+			pass
+		elif AgeNumber >= 18:
+			pass
+	# Generate events possibilities
+	var event_list = file.get_as_text()
+	var event_contents = file.get_as_text()
+	var separeted_events = event_contents.split("\n")
+	var line_count = 0
+	while !file.eof_reached():
+		var line = file.get_line()
+		if line != "":
+			line_count += 1
+	file.close() 
+	# Choose event
+	var random_event_number = randi() % (line_count - 1) + 1
+	print(random_event_number)
+	var choose_event_line = separeted_events[random_event_number]
+	var choose_event = choose_event_line.split("\t")
+	var choose_event_title = choose_event[0]
+	var choose_event_text = choose_event[1]
+	var choose_event_bonus = choose_event[2]
+	var choose_event_bonus_type = choose_event[3]
+	# Print results
+	if coin_throw <= 0.5:
+		var event_message_display = "[b]" + choose_event_title + "[/b]" + "\n\n" + choose_event_text + "[color=blue]" + "\n\n" + choose_event_bonus + "[/color]"
+		$Control/randomEventPanelContainer/MarginContainer/HBoxContainer/LuckEventLabel.bbcode_text = event_message_display
+		random_event_texture.texture = preload("res://Assets/smile.png")
+	elif coin_throw > 0.5:
+		var event_message_display = "[b]" + choose_event_title + "[/b]" + "\n\n" + choose_event_text + "[color=red]" + "\n\n" + choose_event_bonus + "[/color]"
+		$Control/randomEventPanelContainer/MarginContainer/HBoxContainer/LuckEventLabel.bbcode_text = event_message_display
+		random_event_texture.texture = preload("res://Assets/sad.png")
+	# Apply bonus effect
+	if choose_event_bonus_type == "Happiness":
+		happiness  += 5	
+	elif choose_event_bonus_type == "Intelligence":
+		intelligence += 5	
+	elif choose_event_bonus_type == "Health":
+		health  += 5	
+	elif choose_event_bonus_type == "Charisma":
+		charisma  += 5
+	update_status()

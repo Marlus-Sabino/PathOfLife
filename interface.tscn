@@ -575,7 +575,6 @@ scale = Vector2(1.51, 1.56)
 texture = ExtResource("7_tivkt")
 
 [node name="Control" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1440.0
@@ -616,6 +615,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_meqpx")
 layout_mode = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="Control/randomEventPanelContainer/MarginContainer/HBoxContainer/PanelContainer/VSplitContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_ufdt5")
@@ -624,6 +624,11 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ufdt5")
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxEmpty_wgktm")
+
+[node name="randomEventSprite" type="Sprite2D" parent="Control/randomEventPanelContainer/MarginContainer/HBoxContainer/PanelContainer/VSplitContainer"]
+position = Vector2(150, 130)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_obnfx")
 
 [node name="LuckEventLabel" type="RichTextLabel" parent="Control/randomEventPanelContainer/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(850, 0)
@@ -699,6 +704,7 @@ text = "Okay"
 flat = true
 
 [node name="ActicitiesMenu" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 46.0
@@ -1444,6 +1450,7 @@ text = "Activities"
 horizontal_alignment = 1
 
 [node name="Istockphoto-483768005-612x612" type="Sprite2D" parent="."]
+visible = false
 self_modulate = Color(1, 1, 1, 0.0784314)
 position = Vector2(720.5, 1424)
 scale = Vector2(2.35457, 6.53)

@@ -1,0 +1,9 @@
+Title	Event	Bonus	Points
+Favorite toy:	"You played with your favorite toy, bringing you joy and comfort."	Happiness + 5	Happiness
+Sweet dream:	"You had a particularly sweet dream, having a pleasant long sleep."	Happiness + 5	Happiness
+Successful potty training:	"You successfully learned to use the potty, achieving a significant milestone with ease."	Intelligence + 5	Intelligence
+Loving caregivers:	You are surrounded by caring and nurturing caregivers who provide a supportive and stimulating environment.	Intelligence + 5	Intelligence
+Excellent health:	"You remain in excellent health, experiencing minimal illnesses or medical issues."	Health + 5	Health
+Excellent health:	"You have an exceptional health, rarely encountering any illnesses or medical concerns."	Health + 5	Health
+Supportive community:	"You become part of a supportive community, where neighbors and friends offer help and encouragement."	Charisma + 5	Charisma
+King of the Playground:	Everyone wanted to play with you in the park and you make lots of friends.	Charisma + 5	Charisma
