@@ -29,45 +29,16 @@ var activities_menu_Activity2:ScrollContainer
 var activities_menu_Activity3:ScrollContainer
 var activities_menu_Activity4:ScrollContainer
 var activities_menu_Activity5:ScrollContainer
+var choose_event_button_4:Sprite2D
+var choose_event_button_3:Sprite2D
 var choose_event_button_2:Sprite2D
 var choose_event_button_1:Sprite2D
 var random_event_texture:Sprite2D
 var choose_event_button_1_label:Button
 var choose_event_button_2_label:Button
+var choose_event_button_3_label:Button
+var choose_event_button_4_label:Button
 var coin_throw
-
-var choose_event_title_toodler = [
-	"Early development:", 
-	"Special talent:"
-]
-var choose_event_toodler = [
-	"\n\nYou have exhibited exceptional early development. Choose an interesting you would like to boost:", 
-	"\n\nThe toddler discovers a unique talent or interest at a young age, setting them on a path of early success and recognition:"
-]
-var choose_event_option_1_label_toodler = [
-	"Art",
-	"Sport"
-]
-var choose_event_option_2_label_toodler = [
-	"Sport",
-	"Art"
-]
-
-func choose_event_option_1_toodler():
-	var random_event_number = Global.RandomEventNumber
-	if choose_event_option_1_label_toodler[random_event_number] == "Art":
-		appearance += 1
-	elif choose_event_option_1_label_toodler[random_event_number] == "Sport":
-		health += 1
-func choose_event_option_2_toodler():
-	var random_event_number = Global.RandomEventNumber
-	if choose_event_option_2_label_toodler[random_event_number] == "Art":
-		appearance += 1
-	elif choose_event_option_2_label_toodler[random_event_number] == "Sport":
-		health += 1
-		
-		#sexIdentity = "male"
-		#Global.sexIdentity = sexIdentity
 
 func name_male():
 	var file
@@ -157,12 +128,18 @@ func _ready():
 	#random_event_panelContainer = $randomEventPanelContainer
 	random_event_panelContainer = $Control
 	random_event_panelContainer.visible = false
-	choose_event_button_2 = $Control/randomEventPanelContainer/Choose2ButtonSprite2
+	choose_event_button_4 = $Control/randomEventPanelContainer/Choose4ButtonSprite
+	choose_event_button_4.visible = true
+	choose_event_button_3 = $Control/randomEventPanelContainer/Choose3ButtonSprite
+	choose_event_button_3.visible = true
+	choose_event_button_2 = $Control/randomEventPanelContainer/Choose2ButtonSprite
 	choose_event_button_2.visible = true
 	choose_event_button_1 = $Control/randomEventPanelContainer/Choose1ButtonSprite
 	choose_event_button_1.visible = true
 	choose_event_button_1_label = $Control/randomEventPanelContainer/Choose1ButtonSprite/Choose1Button
-	choose_event_button_2_label = $Control/randomEventPanelContainer/Choose2ButtonSprite2/Choose2Button
+	choose_event_button_2_label = $Control/randomEventPanelContainer/Choose2ButtonSprite/Choose2Button
+	choose_event_button_3_label = $Control/randomEventPanelContainer/Choose3ButtonSprite/Choose3Button
+	choose_event_button_4_label = $Control/randomEventPanelContainer/Choose4ButtonSprite/Choose4Button
 	random_event_texture = $Control/randomEventPanelContainer/MarginContainer/HBoxContainer/PanelContainer/VSplitContainer/randomEventSprite
 	
 	activities_menu_panelContainer = $ActicitiesMenu
@@ -268,24 +245,6 @@ func _on_close_random_event_button_pressed():
 	hidePanel()
 	choose_event()
 
-func _on_choose_2_button_pressed():
-	print(health)
-	print(appearance)
-	choose_event_option_2_toodler()
-	update_status()
-	print(health)
-	print(appearance)
-	random_event_panelContainer.visible = false
-
-func _on_choose_1_button_pressed():
-	print(health)
-	print(appearance)
-	choose_event_option_1_toodler()
-	update_status()
-	print(health)
-	print(appearance)
-	random_event_panelContainer.visible = false
-
 func appearance_age():
 	if AgeNumber < 13:
 		appearance += 1
@@ -358,20 +317,6 @@ func game_over():
 func luck_coin():
 	coin_throw = randf()  # Generate a random number between 0 and 1
 
-func choose_event():	
-	luck_coin()
-	print(coin_throw)
-	if  coin_throw <= 0.5:
-		var random_event_number = randi() % 2
-		Global.RandomEventNumber = random_event_number
-		random_event_panelContainer.visible = true
-		choose_event_button_2.visible = true
-		choose_event_button_1.visible = true
-		if AgeNumber < 5:
-			$Control/randomEventPanelContainer/MarginContainer/HBoxContainer/LuckEventLabel.bbcode_text = "[b]" + choose_event_title_toodler[random_event_number] + "[/b]" + choose_event_toodler[random_event_number] + "[color=blue]"
-			choose_event_button_1_label.text = choose_event_option_1_label_toodler[random_event_number]
-			choose_event_button_2_label.text = choose_event_option_2_label_toodler[random_event_number]
-
 func _on_acticities_menu_hide():
 	activities_menu_Activity1.visible = false
 	activities_menu_Activity2.visible = false
@@ -436,13 +381,15 @@ func _on_texture_button_2_pressed():
 
 const profile_models = preload("res://Assets/character-models/profile-models.gd")
 
-#random event new system
+#random event
 func random_event():
 	# Initialize pannels
 	luck_coin()
 	random_event_panelContainer.visible = true
 	choose_event_button_2.visible = false
 	choose_event_button_1.visible = false
+	choose_event_button_3.visible = false
+	choose_event_button_4.visible = false
 	#select event file
 	var file
 	if coin_throw <= 0.5:
@@ -501,3 +448,153 @@ func random_event():
 	elif choose_event_bonus_type == "Charisma":
 		charisma  += 5
 	update_status()
+
+
+
+
+
+func choose_event():	
+	luck_coin()
+	print(coin_throw)
+	if  coin_throw <= 1:
+		var file
+		if AgeNumber < 5:
+			file = FileAccess.open("res://data/toddler_choose_event.txt",FileAccess.READ)
+		elif AgeNumber < 13:
+			pass
+		elif AgeNumber < 18:
+			pass
+		elif AgeNumber >= 18:
+			pass
+		# Generate events possibilities
+		var event_list = file.get_as_text()
+		var event_contents = file.get_as_text()
+		var separeted_events = event_contents.split("\n")
+		var line_count = 0
+		while !file.eof_reached():
+			var line = file.get_line()
+			if line != "":
+				line_count += 1
+		file.close() 
+		# Choose event
+		var random_event_number = randi() % (line_count - 1) + 1
+		print(random_event_number)
+		var choose_event_line = separeted_events[random_event_number]
+		var choose_event = choose_event_line.split("\t")
+		var choose_event_title = choose_event[0]
+		var choose_event_text = choose_event[1]
+		var choose_event_option_1 = choose_event[2]
+		var choose_event_option_2 = choose_event[3]
+		var choose_event_option_3 = choose_event[4]
+		var choose_event_option_4 = choose_event[5]
+		var choose_event_bonus_type_1 = choose_event[6]
+		var choose_event_bonus_type_2 = choose_event[7]
+		var choose_event_bonus_type_3 = choose_event[8]
+		var choose_event_bonus_type_4 = choose_event[9]
+		var choose_event_bonus_impact_1 = choose_event[10]
+		var choose_event_bonus_impact_2 = choose_event[11]
+		var choose_event_bonus_impact_3 = choose_event[12]
+		var choose_event_bonus_impact_4 = choose_event[13]
+		var choose_event_bonus = choose_event[14]
+		
+		
+		Global.choose_event_bonus_type_1 = choose_event[6]
+		Global.choose_event_bonus_type_2 = choose_event[7]
+		Global.choose_event_bonus_type_3 = choose_event[8]
+		Global.choose_event_bonus_type_4 = choose_event[9]
+		Global.choose_event_bonus_impact_1 = choose_event[10]
+		Global.choose_event_bonus_impact_2 = choose_event[11]
+		Global.choose_event_bonus_impact_3 = choose_event[12]
+		Global.choose_event_bonus_impact_4 = choose_event[13]
+		Global.choose_event_bonus = choose_event[14]
+		
+		random_event_panelContainer.visible = true
+		if choose_event_option_1 != "":
+			choose_event_button_1.visible = true
+			choose_event_button_1_label.text = choose_event_option_1
+		if choose_event_option_2 != "":
+			choose_event_button_2.visible = true
+			choose_event_button_2_label.text = choose_event_option_2
+		if choose_event_option_3 != "":
+			choose_event_button_3.visible = true
+			choose_event_button_3_label.text = choose_event_option_3
+		if choose_event_option_4 != "":
+			choose_event_button_4.visible = true
+			choose_event_button_4_label.text = choose_event_option_4
+			
+		var event_message_display = "[b]" + choose_event_title + "[/b]" + "\n\n" + choose_event_text
+		$Control/randomEventPanelContainer/MarginContainer/HBoxContainer/LuckEventLabel.bbcode_text = event_message_display
+		random_event_texture.texture = preload("res://Assets/attention.png")
+
+func _on_choose_1_button_pressed():
+	var selected_choose_event_bonus_type = Global.choose_event_bonus_type_1
+	Global.selected_choose_event_bonus_type = selected_choose_event_bonus_type
+	var selected_choose_event_bonus_impact = Global.choose_event_bonus_impact_1
+	Global.selected_choose_event_bonus_impact = selected_choose_event_bonus_impact
+	choose_event_bonus()
+	update_status()
+	random_event_panelContainer.visible = false
+
+func _on_choose_2_button_pressed():
+	var selected_choose_event_bonus_type = Global.choose_event_bonus_type_2
+	Global.selected_choose_event_bonus_type = selected_choose_event_bonus_type
+	var selected_choose_event_bonus_impact = Global.choose_event_bonus_impact_2
+	Global.selected_choose_event_bonus_impact = selected_choose_event_bonus_impact
+	choose_event_bonus()
+	update_status()
+	random_event_panelContainer.visible = false
+
+func _on_choose_3_button_pressed():
+	var selected_choose_event_bonus_type = Global.choose_event_bonus_type_3
+	Global.selected_choose_event_bonus_type = selected_choose_event_bonus_type
+	var selected_choose_event_bonus_impact = Global.choose_event_bonus_impact_3
+	Global.selected_choose_event_bonus_impact = selected_choose_event_bonus_impact
+	choose_event_bonus()
+	update_status()
+	random_event_panelContainer.visible = false
+
+
+func _on_choose_4_button_pressed():
+	var selected_choose_event_bonus_type = Global.choose_event_bonus_type_4
+	Global.selected_choose_event_bonus_type = selected_choose_event_bonus_type
+	var selected_choose_event_bonus_impact = Global.choose_event_bonus_impact_4
+	Global.selected_choose_event_bonus_impact = selected_choose_event_bonus_impact
+	choose_event_bonus()
+	update_status()
+	random_event_panelContainer.visible = false
+
+func choose_event_bonus():
+	var choose_event_bonus = Global.choose_event_bonus
+	var selected_choose_event_bonus_type = Global.selected_choose_event_bonus_type
+	var selected_choose_event_bonus_impact = Global.selected_choose_event_bonus_impact
+	choose_event_bonus = choose_event_bonus.to_int()
+	if selected_choose_event_bonus_impact == "positive":
+		if selected_choose_event_bonus_type == "Health":
+			health += choose_event_bonus
+		elif selected_choose_event_bonus_type == "Happiness":
+			happiness += choose_event_bonus
+		elif selected_choose_event_bonus_type == "Charisma":
+			charisma += choose_event_bonus
+		elif selected_choose_event_bonus_type == "Intelligence":
+			intelligence += choose_event_bonus
+		elif selected_choose_event_bonus_type == "Appearance":
+			appearance += choose_event_bonus
+		elif selected_choose_event_bonus_type == "Stress":
+			stress += choose_event_bonus
+	elif selected_choose_event_bonus_impact == "negative":
+		if selected_choose_event_bonus_type == "Health":
+			health -= choose_event_bonus
+		elif selected_choose_event_bonus_type == "Happiness":
+			happiness -= choose_event_bonus
+		elif selected_choose_event_bonus_type == "Charisma":
+			charisma -= choose_event_bonus
+		elif selected_choose_event_bonus_type == "Intelligence":
+			intelligence -= choose_event_bonus
+		elif selected_choose_event_bonus_type == "Appearance":
+			appearance -= choose_event_bonus
+		elif selected_choose_event_bonus_type == "Stress":
+			stress -= choose_event_bonus
+	
+
+
+

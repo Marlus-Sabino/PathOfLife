@@ -1,0 +1,4 @@
+title	event	option1	option2	option3	option4	bonusType1	bonusType2	bonusType3	bonusType4	bonusImpact1	bonusImpact2	bonusImpact3	bonusImpact4	bonusAmount
+Early development:	You have exhibited exceptional early development. Choose an interesting you would like to boost:	Art	Sport	Mental	Speech	Appearance	Health	Intelligence	Charisma	positive	positive	positive	positive	1
+Special talent:	"The toddler discovers a unique talent or interest at a young age, setting them on a path of early success and recognition:"	Art	Sport	Mental	Speech	Appearance	Health	Intelligence	Charisma	positive	positive	positive	positive	1
+Test	Test	Art	No			appearance	Health			positive	positive			1
