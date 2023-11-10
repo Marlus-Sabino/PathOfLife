@@ -1,111 +1,52 @@
 extends Node
 
+#Set on ready variables
+##Basic information and its labels
+@onready var sexIdentity
+@onready var profileName
+@onready var profileSurname
+@onready var skinColor = randi() %35
+@onready var clothesColor = Color(randf(), randf(), randf())
 @onready var NameLabel = $BasicInfoContainer/BasicInfoVBox/NameLabel
 @onready var SexIdentityLabel = $BasicInfoContainer/BasicInfoVBox/SexIndentityLabel
 @onready var AgeLabel = $BasicInfoContainer/BasicInfoVBox/Age_Label
 @onready var OcuppationLabel = $BasicInfoContainer/BasicInfoVBox/OcupationLabel
-
+##Set initial energy and status
 @onready var AgeNumber = 0
 @onready var energy = 100
 @onready var healthrisk = 0.5
-
 @onready var health = 100
 @onready var happiness = 100
 @onready var charisma = 100
 @onready var intelligence = 100
 @onready var appearance = 100
 @onready var stress = 100
-@onready var sexIdentity
-@onready var profileName
-@onready var profileSurname
-@onready var skinColor = randi() %35
-@onready var clothesColor = Color(randf(), randf(), randf())
+@onready var coin_throw
+##Set scene nodes type
+@onready var random_event_panelContainer:Control
+@onready var activities_menu_panelContainer:Control
+@onready var activities_menu_Activity1:ScrollContainer
+@onready var activities_menu_Activity2:ScrollContainer
+@onready var activities_menu_Activity3:ScrollContainer
+@onready var activities_menu_Activity4:ScrollContainer
+@onready var activities_menu_Activity5:ScrollContainer
+@onready var choose_event_button_4:Sprite2D
+@onready var choose_event_button_3:Sprite2D
+@onready var choose_event_button_2:Sprite2D
+@onready var choose_event_button_1:Sprite2D
+@onready var random_event_texture:Sprite2D
+@onready var choose_event_button_1_label:Button
+@onready var choose_event_button_2_label:Button
+@onready var choose_event_button_3_label:Button
+@onready var choose_event_button_4_label:Button
+## profile
+@onready var bodySprite = $StatusProfile/StatusProfileVbox/ProfielContainerMarginr/PanelContainer/body
+@onready var clothesSprite = $StatusProfile/StatusProfileVbox/ProfielContainerMarginr/PanelContainer/clothes
+@onready var emotionSprite = $StatusProfile/StatusProfileVbox/ProfielContainerMarginr/PanelContainer/emotion
+const profile_models = preload("res://Assets/character-models/profile-models.gd")
 
-#var random_event_panelContainer:PanelContainer
-var random_event_panelContainer:Control
-var activities_menu_panelContainer:Control
-var activities_menu_Activity1:ScrollContainer
-var activities_menu_Activity2:ScrollContainer
-var activities_menu_Activity3:ScrollContainer
-var activities_menu_Activity4:ScrollContainer
-var activities_menu_Activity5:ScrollContainer
-var choose_event_button_4:Sprite2D
-var choose_event_button_3:Sprite2D
-var choose_event_button_2:Sprite2D
-var choose_event_button_1:Sprite2D
-var random_event_texture:Sprite2D
-var choose_event_button_1_label:Button
-var choose_event_button_2_label:Button
-var choose_event_button_3_label:Button
-var choose_event_button_4_label:Button
-var coin_throw
-
-func name_male():
-	var file
-	var contents
-	var randomIndex
-	var names_option
-	var surnames_option
-	var path_name = "res://names_male.txt"
-	var path_surname = "res://surnames.txt"
-	
-	file = FileAccess.open(path_name,FileAccess.READ)
-	contents = file.get_as_text()
-	file.close()
-	names_option = contents.split("\n")
-	file = FileAccess.open(path_surname,FileAccess.READ)
-	contents = file.get_as_text()
-	file.close()
-	surnames_option = contents.split("\n")
-	
-	randomIndex = randi() % names_option.size()
-	profileName = names_option[randomIndex]
-	randomIndex = randi() % surnames_option.size()
-	profileSurname = surnames_option[randomIndex]
-	
-	print(profileName)
-	print(profileSurname)
-
-func name_female():
-	var file
-	var contents
-	var randomIndex
-	var names_option
-	var surnames_option
-	var path_name = "res://names_female.txt"
-	var path_surname = "res://surnames.txt"
-	
-	file = FileAccess.open(path_name,FileAccess.READ)
-	contents = file.get_as_text()
-	file.close()
-	names_option = contents.split("\n")
-	file = FileAccess.open(path_surname,FileAccess.READ)
-	contents = file.get_as_text()
-	file.close()
-	surnames_option = contents.split("\n")
-	
-	randomIndex = randi() % names_option.size()
-	profileName = names_option[randomIndex]
-	randomIndex = randi() % surnames_option.size()
-	profileSurname = surnames_option[randomIndex]
-	
-	print(profileName)
-	print(profileSurname)
-
-func SexIndentityCoin():
-	luck_coin()
-	if coin_throw<=0.5:
-		sexIdentity = "male"
-		name_male()
-	else:
-		name_female()
-		sexIdentity = "female"
-	Global.SexIdentity = sexIdentity
-	Global.ProfileName = profileName.strip_edges()
-	Global.ProfileSurname = profileSurname.strip_edges()
-	print(sexIdentity)
-	
 func _ready():
+	#Initialize status
 	AgeNumber = Global.AgeNumber
 	health = Global.health
 	happiness = Global.happiness
@@ -113,21 +54,21 @@ func _ready():
 	intelligence = Global.intelligence
 	appearance = Global.appearance
 	stress = Global.stress
-	
 	SexIndentityCoin()
 	sexIdentity = Global.SexIdentity 
+	give_name()
 	profileName = Global.ProfileName
 	profileSurname = Global.ProfileSurname
-	
 	var fullName = (profileName + " " + profileSurname).strip_edges()
-	print(fullName)
 	NameLabel.text = fullName
 	SexIdentityLabel.text = sexIdentity
 	OcuppationLabel.text = "baby"
-	
-	#random_event_panelContainer = $randomEventPanelContainer
+	#Set scene nodes
+	##random event
 	random_event_panelContainer = $Control
 	random_event_panelContainer.visible = false
+	random_event_texture = $Control/randomEventPanelContainer/MarginContainer/HBoxContainer/PanelContainer/VSplitContainer/randomEventSprite
+	##choose event
 	choose_event_button_4 = $Control/randomEventPanelContainer/Choose4ButtonSprite
 	choose_event_button_4.visible = true
 	choose_event_button_3 = $Control/randomEventPanelContainer/Choose3ButtonSprite
@@ -140,11 +81,9 @@ func _ready():
 	choose_event_button_2_label = $Control/randomEventPanelContainer/Choose2ButtonSprite/Choose2Button
 	choose_event_button_3_label = $Control/randomEventPanelContainer/Choose3ButtonSprite/Choose3Button
 	choose_event_button_4_label = $Control/randomEventPanelContainer/Choose4ButtonSprite/Choose4Button
-	random_event_texture = $Control/randomEventPanelContainer/MarginContainer/HBoxContainer/PanelContainer/VSplitContainer/randomEventSprite
-	
+	##activites menu
 	activities_menu_panelContainer = $ActicitiesMenu
 	activities_menu_panelContainer.visible = false
-	
 	activities_menu_Activity1 = $"ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollArtistic"
 	activities_menu_Activity1.visible = false
 	activities_menu_Activity2 = $"ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollMental"
@@ -155,12 +94,54 @@ func _ready():
 	activities_menu_Activity4.visible = false
 	activities_menu_Activity5 = $"ActicitiesMenu/Box-inside-sprite/ToddlesActivitiesOptions/ScrollChildCare"
 	activities_menu_Activity5.visible = false
-	
-	
+	#update status
 	update_status()
-	update_label()
 	game_over()
-	
+
+func luck_coin():
+	coin_throw = randf()  # Generate a random number between 0 and 1
+#Set sex identity
+func SexIndentityCoin():
+	luck_coin()
+	if coin_throw<=0.5:
+		sexIdentity = "male"
+	else:
+		sexIdentity = "female"
+	Global.SexIdentity = sexIdentity
+#Set name
+func give_name():
+	#Set initial variables
+	var file
+	var contents
+	var randomIndex
+	var names_option
+	var surnames_option
+	var path_surname = "res://surnames.txt"
+	var path_name
+	var sexIdentity = Global.SexIdentity 
+	#Select names list based on sexIdentity
+	if sexIdentity == "male":
+		path_name = "res://names_male.txt"
+	elif sexIdentity == "female":
+		path_name = "res://names_female.txt"
+	#Extract names list
+	file = FileAccess.open(path_name,FileAccess.READ)
+	contents = file.get_as_text()
+	file.close()
+	names_option = contents.split("\n")
+	file = FileAccess.open(path_surname,FileAccess.READ)
+	contents = file.get_as_text()
+	file.close()
+	surnames_option = contents.split("\n")
+	#Choose name
+	randomIndex = randi() % names_option.size()
+	profileName = names_option[randomIndex]
+	randomIndex = randi() % surnames_option.size()
+	profileSurname = surnames_option[randomIndex]
+	#Set name
+	Global.ProfileName = profileName.strip_edges()
+	Global.ProfileSurname = profileSurname.strip_edges()
+#Set profile caracter 
 func profileCombine():
 	if AgeNumber <= 5:
 		bodySprite.texture = profile_models.body_spritesheet[0]
@@ -190,9 +171,6 @@ func profileCombine():
 				#hairSprite.texture = profile_models.hair_spritesheet[0]
 	bodySprite.self_modulate = profile_models.skin_color_spritesheet[skinColor]
 	clothesSprite.self_modulate = clothesColor
-		
-func hidePanel():
-	random_event_panelContainer.visible = false
 
 func update_status():
 	health = clamp(health, 0, 100)
@@ -201,6 +179,8 @@ func update_status():
 	intelligence = clamp(intelligence, 0, 100)
 	appearance = clamp(appearance, 0, 100)
 	stress = clamp(stress, 0, 100)
+	$EnergyBar.value = energy
+	AgeLabel.text = "Age " + str(AgeNumber)
 	$StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars/HealthContainerBar/HealthBar.value = health
 	$StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars/HappinesContainerBar/HappinessBar.value = happiness
 	$StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars/CharismaContainerBar/CharismaBar.value = charisma
@@ -209,40 +189,25 @@ func update_status():
 	$StatusProfile/StatusProfileVbox/StatusContainerMargin/StatusContainer/StatusContainerBars/StressContainer/StressBar.value = stress
 	profileCombine()
 
-func update_label():
-	AgeLabel.text = "Age " + str(AgeNumber)
-
-func update_energy():
-	$EnergyBar.value = energy
-
 func _on_next_year_button_pressed():
 	AgeNumber += 1
-	update_label()
-		
 	energy = 100
-	update_energy()
-	
-	stress += 10
-	
 	appearance_age()
 	happiness_on_health()
 	stress_on_happiness()
 	update_status()
-	
 	profileCombine()
-	
 	death_event()
 	game_over()
-	
-	if AgeNumber < 5:
+	if AgeNumber<=3:
 		random_event()
 
 func _on_activity_button_pressed():
 	energy -= 10
-	update_energy()
+	update_status()
 
 func _on_close_random_event_button_pressed():
-	hidePanel()
+	random_event_panelContainer.visible = false
 	choose_event()
 
 func appearance_age():
@@ -275,16 +240,16 @@ func death_event():
 	var deathVisit = randf()  # Generate a random number between 0 and 1
 	healthrisk = 50.0 / health
 	if AgeNumber <= 19:
-		if deathVisit <= 0.0012*2*healthrisk:
+		if deathVisit <= 0.00012*2*healthrisk:
 			health = 0
 	elif AgeNumber > 19 and AgeNumber <= 39:
-		if deathVisit <= 0.0030*2*healthrisk:
+		if deathVisit <= 0.00030*2*healthrisk:
 			health = 0
 	elif AgeNumber > 39 and AgeNumber <= 59:
-		if deathVisit <= 0.015*2*healthrisk:
+		if deathVisit <= 0.0015*2*healthrisk:
 			health = 0
 	elif AgeNumber > 59 and AgeNumber <= 79:
-		if deathVisit <= 0.055*2*healthrisk:
+		if deathVisit <= 0.0055*2*healthrisk:
 			health = 0
 	elif AgeNumber > 79 and AgeNumber <= 85:
 		if deathVisit <= 0.195*2*healthrisk:
@@ -298,7 +263,6 @@ func death_event():
 
 func game_over():
 	if health == 0:
-		
 		# Update the game state
 		Global.AgeNumber = AgeNumber
 		Global.health = 50
@@ -306,16 +270,8 @@ func game_over():
 		Global.charisma = charisma
 		Global.intelligence = intelligence
 		Global.appearance = appearance
-		Global.stress = stress
-		
+		Global.stress = stress	
 		get_tree().change_scene_to_file("res://you_died.tscn")
-		# Replace "path_to_second_scene.tscn" with the actual path to your second scene
-		# You can use an absolute path or relative path from the project root
-		# Optionally, you can call `free()` to free up the resources of the current scene
-		# before transitioning to the second scene
-
-func luck_coin():
-	coin_throw = randf()  # Generate a random number between 0 and 1
 
 func _on_acticities_menu_hide():
 	activities_menu_Activity1.visible = false
@@ -361,7 +317,6 @@ func _on_texture_button_4_pressed():
 		happiness += randf() * 11.0
 	else:
 		print("not enough energy")
-	update_energy()
 	update_status()
 
 func _on_texture_button_2_pressed():
@@ -371,15 +326,7 @@ func _on_texture_button_2_pressed():
 		happiness += randf() * 11.0
 	else:
 		print("not enough energy")
-	update_energy()
 	update_status()
-
-## profile
-@onready var bodySprite = $StatusProfile/StatusProfileVbox/ProfielContainerMarginr/PanelContainer/body
-@onready var clothesSprite = $StatusProfile/StatusProfileVbox/ProfielContainerMarginr/PanelContainer/clothes
-@onready var emotionSprite = $StatusProfile/StatusProfileVbox/ProfielContainerMarginr/PanelContainer/emotion
-
-const profile_models = preload("res://Assets/character-models/profile-models.gd")
 
 #random event
 func random_event():
@@ -449,14 +396,11 @@ func random_event():
 		charisma  += 5
 	update_status()
 
-
-
-
-
-func choose_event():	
+# choose event section
+func choose_event():
 	luck_coin()
 	print(coin_throw)
-	if  coin_throw <= 1:
+	if  coin_throw <= 0.5:
 		var file
 		if AgeNumber < 5:
 			file = FileAccess.open("res://data/toddler_choose_event.txt",FileAccess.READ)
@@ -496,7 +440,6 @@ func choose_event():
 		var choose_event_bonus_impact_3 = choose_event[12]
 		var choose_event_bonus_impact_4 = choose_event[13]
 		var choose_event_bonus = choose_event[14]
-		
 		
 		Global.choose_event_bonus_type_1 = choose_event[6]
 		Global.choose_event_bonus_type_2 = choose_event[7]
@@ -553,7 +496,6 @@ func _on_choose_3_button_pressed():
 	update_status()
 	random_event_panelContainer.visible = false
 
-
 func _on_choose_4_button_pressed():
 	var selected_choose_event_bonus_type = Global.choose_event_bonus_type_4
 	Global.selected_choose_event_bonus_type = selected_choose_event_bonus_type
@@ -594,7 +536,3 @@ func choose_event_bonus():
 			appearance -= choose_event_bonus
 		elif selected_choose_event_bonus_type == "Stress":
 			stress -= choose_event_bonus
-	
-
-
-
